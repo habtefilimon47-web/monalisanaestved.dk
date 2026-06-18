@@ -1,0 +1,1760 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Restaurant Mona Lisa – Næstved | Familierestaurant & Colorado Steak</title>
+  <meta name="description" content="Restaurant Mona Lisa i Næstved tilbyder klassisk dansk mad, smørrebrød, Colorado Steak ad libitum, selskaber og buffeter. Bestil bord online eller ring 55 73 41 92." />
+  <meta name="keywords" content="restaurant næstved, mona lisa næstved, colorado steak, smørrebrød, familierestaurant, selskaber næstved" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://restaurant-monalisa.dk" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="restaurant" />
+  <meta property="og:title" content="Restaurant Mona Lisa – Næstved" />
+  <meta property="og:description" content="Klassisk dansk mad, Colorado Steak ad libitum og hyggeligt familieambiente i hjertet af Næstved." />
+  <meta property="og:url" content="https://restaurant-monalisa.dk" />
+  <meta property="og:locale" content="da_DK" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gold: {
+              DEFAULT: '#C9A84C',
+              light: '#E2C97E',
+              dark: '#9B7B2E',
+            },
+            charcoal: {
+              DEFAULT: '#1A1A1A',
+              light: '#252525',
+              lighter: '#2E2E2E',
+            },
+            cream: '#F5F0E8',
+            taupe: '#8B7355',
+          },
+          fontFamily: {
+            display: ['Playfair Display', 'Georgia', 'serif'],
+            body: ['Inter', 'system-ui', 'sans-serif'],
+            elegant: ['Cormorant Garamond', 'Georgia', 'serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    :root {
+      --gold: #C9A84C;
+      --gold-light: #E2C97E;
+      --charcoal: #1A1A1A;
+      --charcoal-light: #252525;
+      --cream: #F5F0E8;
+    }
+
+    * { scroll-behavior: smooth; }
+
+    body {
+      background-color: #0D0D0D;
+      color: var(--cream);
+      font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* ── Scrollbar ── */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #0D0D0D; }
+    ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 3px; }
+
+    /* ── Nav ── */
+    #navbar {
+      transition: background 0.4s ease, box-shadow 0.4s ease;
+    }
+    #navbar.scrolled {
+      background: rgba(13,13,13,0.97) !important;
+      box-shadow: 0 2px 30px rgba(0,0,0,0.6);
+    }
+    .nav-link {
+      position: relative;
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #ccc;
+      transition: color 0.3s;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -3px; left: 0;
+      width: 0; height: 1px;
+      background: var(--gold);
+      transition: width 0.3s ease;
+    }
+    .nav-link:hover { color: var(--gold); }
+    .nav-link:hover::after { width: 100%; }
+
+    /* ── Hero ── */
+    .hero-bg {
+      background: linear-gradient(135deg,
+        #0D0D0D 0%,
+        #1A1208 30%,
+        #0D0D0D 100%),
+        radial-gradient(ellipse at 60% 40%, rgba(201,168,76,0.08) 0%, transparent 60%);
+      min-height: 100vh;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-bg::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 65% 45%, rgba(201,168,76,0.06) 0%, transparent 70%),
+        url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23C9A84C' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+
+    .hero-slash {
+      position: absolute;
+      top: 0; right: 0;
+      width: 55%; height: 100%;
+      background: linear-gradient(135deg, transparent 0%, rgba(201,168,76,0.04) 50%, transparent 100%);
+      clip-path: polygon(8% 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    .hero-food-panel {
+      position: relative;
+      background: linear-gradient(135deg, #1A1208 0%, #0F0F0F 100%);
+      border: 1px solid rgba(201,168,76,0.15);
+      overflow: hidden;
+    }
+
+    /* Food illustration panels */
+    .food-visual {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 5rem;
+      opacity: 0.7;
+    }
+
+    /* ── Gold divider ── */
+    .gold-divider {
+      width: 60px; height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    }
+
+    .gold-divider-full {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(201,168,76,0.4), transparent);
+    }
+
+    /* ── Section titles ── */
+    .section-eyebrow {
+      font-size: 0.7rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-weight: 600;
+      line-height: 1.1;
+    }
+
+    /* ── Cards ── */
+    .dish-card {
+      background: #141414;
+      border: 1px solid rgba(201,168,76,0.1);
+      transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+      overflow: hidden;
+    }
+    .dish-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(201,168,76,0.35);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.5), 0 0 0 1px rgba(201,168,76,0.1);
+    }
+    .dish-card .dish-img {
+      background: linear-gradient(135deg, #1A1208, #0D0D0D);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3.5rem;
+      transition: transform 0.5s ease;
+    }
+    .dish-card:hover .dish-img {
+      transform: scale(1.05);
+    }
+
+    /* ── Colorado section ── */
+    .colorado-bg {
+      background:
+        linear-gradient(135deg, rgba(13,13,13,0.97) 0%, rgba(26,18,8,0.95) 100%),
+        repeating-linear-gradient(
+          45deg,
+          rgba(201,168,76,0.02) 0px,
+          rgba(201,168,76,0.02) 1px,
+          transparent 1px,
+          transparent 20px
+        );
+    }
+
+    /* ── Menu tabs ── */
+    .menu-tab {
+      padding: 0.5rem 1.25rem;
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      border: 1px solid rgba(201,168,76,0.2);
+      color: #999;
+      cursor: pointer;
+      transition: all 0.3s;
+      background: transparent;
+    }
+    .menu-tab:hover,
+    .menu-tab.active {
+      background: var(--gold);
+      border-color: var(--gold);
+      color: #0D0D0D;
+      font-weight: 600;
+    }
+
+    .menu-panel { display: none; }
+    .menu-panel.active { display: block; }
+
+    /* ── Menu items ── */
+    .menu-item {
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      padding: 1.1rem 0;
+      transition: background 0.2s;
+    }
+    .menu-item:last-child { border-bottom: none; }
+    .menu-item:hover { background: rgba(201,168,76,0.03); }
+    .menu-price {
+      font-family: 'Playfair Display', serif;
+      color: var(--gold);
+      font-size: 1rem;
+      white-space: nowrap;
+    }
+
+    /* ── Reviews ── */
+    .review-card {
+      background: #141414;
+      border: 1px solid rgba(201,168,76,0.08);
+      transition: border-color 0.3s;
+    }
+    .review-card:hover { border-color: rgba(201,168,76,0.25); }
+
+    /* ── Hours grid ── */
+    .hours-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      font-size: 0.9rem;
+    }
+    .hours-row:last-child { border-bottom: none; }
+    .hours-row.closed .hours-time { color: #555; }
+    .hours-row.today { background: rgba(201,168,76,0.05); margin: 0 -1rem; padding: 0.75rem 1rem; border-radius: 4px; }
+    .hours-row.today .hours-day { color: var(--gold); font-weight: 600; }
+
+    /* ── Form ── */
+    .form-field {
+      background: #141414;
+      border: 1px solid rgba(201,168,76,0.15);
+      color: var(--cream);
+      padding: 0.85rem 1rem;
+      width: 100%;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem;
+      transition: border-color 0.3s;
+      border-radius: 2px;
+      outline: none;
+    }
+    .form-field:focus { border-color: var(--gold); }
+    .form-field::placeholder { color: #555; }
+    .form-field option { background: #1A1A1A; }
+
+    /* ── Buttons ── */
+    .btn-gold {
+      background: var(--gold);
+      color: #0D0D0D;
+      font-weight: 700;
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 1rem 2.5rem;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+      display: inline-block;
+      text-decoration: none;
+    }
+    .btn-gold:hover {
+      background: var(--gold-light);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(201,168,76,0.3);
+    }
+    .btn-outline-gold {
+      background: transparent;
+      color: var(--gold);
+      border: 1px solid var(--gold);
+      font-weight: 600;
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.9rem 2rem;
+      cursor: pointer;
+      transition: all 0.3s;
+      display: inline-block;
+      text-decoration: none;
+    }
+    .btn-outline-gold:hover {
+      background: var(--gold);
+      color: #0D0D0D;
+    }
+
+    /* ── Gallery ── */
+    .gallery-item {
+      aspect-ratio: 1;
+      background: #141414;
+      border: 1px solid rgba(201,168,76,0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.4s, border-color 0.3s;
+      position: relative;
+    }
+    .gallery-item:hover {
+      transform: scale(1.03);
+      border-color: rgba(201,168,76,0.3);
+    }
+    .gallery-item .gallery-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(201,168,76,0.0);
+      transition: background 0.3s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .gallery-item:hover .gallery-overlay {
+      background: rgba(201,168,76,0.08);
+    }
+
+    /* ── Map placeholder ── */
+    .map-container {
+      background: #0F0F0F;
+      border: 1px solid rgba(201,168,76,0.15);
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* ── Facility chips ── */
+    .facility-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      border: 1px solid rgba(201,168,76,0.2);
+      font-size: 0.8rem;
+      letter-spacing: 0.05em;
+      color: #bbb;
+      transition: all 0.3s;
+    }
+    .facility-chip:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+    }
+
+    /* ── Animations ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes slideRight {
+      from { width: 0; }
+      to { width: 60px; }
+    }
+    @keyframes shimmer {
+      0% { background-position: -200% 0; }
+      100% { background-position: 200% 0; }
+    }
+    .animate-fade-up {
+      animation: fadeUp 0.8s ease forwards;
+    }
+    .animate-delay-1 { animation-delay: 0.1s; opacity: 0; }
+    .animate-delay-2 { animation-delay: 0.25s; opacity: 0; }
+    .animate-delay-3 { animation-delay: 0.4s; opacity: 0; }
+    .animate-delay-4 { animation-delay: 0.55s; opacity: 0; }
+
+    /* Scroll reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(25px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ── Mobile menu ── */
+    #mobile-menu {
+      display: none;
+      background: rgba(13,13,13,0.98);
+      border-top: 1px solid rgba(201,168,76,0.15);
+    }
+    #mobile-menu.open { display: block; }
+
+    /* ── Notification toast ── */
+    #toast {
+      position: fixed;
+      bottom: 2rem; right: 2rem;
+      background: #1A1A1A;
+      border: 1px solid var(--gold);
+      color: var(--cream);
+      padding: 1rem 1.5rem;
+      font-size: 0.85rem;
+      z-index: 9999;
+      transform: translateY(100px);
+      opacity: 0;
+      transition: all 0.4s ease;
+      max-width: 300px;
+    }
+    #toast.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    /* ── Section backgrounds ── */
+    .section-dark { background: #0D0D0D; }
+    .section-charcoal { background: #111111; }
+    .section-alt { background: linear-gradient(180deg, #0D0D0D 0%, #111111 50%, #0D0D0D 100%); }
+
+    /* ── Separator ornament ── */
+    .ornament {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      color: var(--gold);
+      font-size: 0.9rem;
+    }
+    .ornament::before,
+    .ornament::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(201,168,76,0.4));
+    }
+    .ornament::after {
+      background: linear-gradient(90deg, rgba(201,168,76,0.4), transparent);
+    }
+
+    /* ── Responsive tweaks ── */
+    @media (max-width: 768px) {
+      .hero-slash { display: none; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .animate-fade-up, .reveal { animation: none; opacity: 1; transform: none; transition: none; }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- ══════════════════════════════════════
+     NAVIGATION
+══════════════════════════════════════ -->
+<nav id="navbar" class="fixed top-0 left-0 right-0 z-50" style="background: transparent;">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="flex items-center justify-between" style="height: 72px;">
+
+      <!-- Logo -->
+      <a href="#top" class="flex flex-col leading-none">
+        <span class="font-display font-bold text-xl tracking-wide" style="color: var(--gold);">Mona Lisa</span>
+        <span class="text-xs tracking-widest uppercase" style="color: #888; letter-spacing: 0.25em; font-size: 0.6rem;">Restaurant · Næstved</span>
+      </a>
+
+      <!-- Desktop nav -->
+      <div class="hidden lg:flex items-center gap-7">
+        <a href="#om" class="nav-link">Om os</a>
+        <a href="#menu" class="nav-link">Menu</a>
+        <a href="#colorado" class="nav-link">Colorado Steak</a>
+        <a href="#selskaber" class="nav-link">Selskaber</a>
+        <a href="#galleri" class="nav-link">Galleri</a>
+        <a href="#kontakt" class="nav-link">Kontakt</a>
+        <a href="#bestil" class="btn-gold" style="padding: 0.6rem 1.4rem; font-size: 0.72rem;">Bestil Bord</a>
+      </div>
+
+      <!-- Mobile hamburger -->
+      <button id="hamburger" class="lg:hidden flex flex-col gap-1.5 p-2" aria-label="Åbn menu">
+        <span class="block w-6 h-0.5" style="background: var(--gold);"></span>
+        <span class="block w-6 h-0.5" style="background: var(--gold);"></span>
+        <span class="block w-4 h-0.5" style="background: var(--gold);"></span>
+      </button>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu">
+      <div class="flex flex-col py-4 gap-1">
+        <a href="#om" class="nav-link py-3 px-2 text-sm">Om os</a>
+        <a href="#menu" class="nav-link py-3 px-2 text-sm">Menu</a>
+        <a href="#colorado" class="nav-link py-3 px-2 text-sm">Colorado Steak</a>
+        <a href="#selskaber" class="nav-link py-3 px-2 text-sm">Selskaber</a>
+        <a href="#galleri" class="nav-link py-3 px-2 text-sm">Galleri</a>
+        <a href="#kontakt" class="nav-link py-3 px-2 text-sm">Kontakt</a>
+        <a href="#bestil" class="btn-gold mt-3 text-center" style="padding: 0.75rem 1rem; font-size: 0.75rem;">Bestil Bord</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+<!-- ══════════════════════════════════════
+     HERO
+══════════════════════════════════════ -->
+<section id="top" class="hero-bg flex items-center" style="min-height: 100vh;">
+  <div class="hero-slash"></div>
+
+  <div class="max-w-7xl mx-auto px-6 w-full py-24">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+
+      <!-- Left: Text -->
+      <div>
+        <p class="section-eyebrow animate-fade-up animate-delay-1">Næstved siden 1985</p>
+        <h1 class="section-title text-5xl md:text-6xl xl:text-7xl mt-4 mb-6 animate-fade-up animate-delay-2"
+            style="color: var(--cream);">
+          En smag<br />
+          <em style="color: var(--gold); font-style: italic;">af det gode</em><br />
+          liv
+        </h1>
+
+        <p class="text-base md:text-lg mb-8 leading-relaxed animate-fade-up animate-delay-3"
+           style="color: #999; max-width: 440px; font-family: 'Cormorant Garamond', serif; font-size: 1.15rem;">
+          Klassisk dansk køkken, den berømte Colorado Steak ad libitum og en varm familierestaurant-stemning — midt i Næstved.
+        </p>
+
+        <div class="flex flex-wrap gap-4 animate-fade-up animate-delay-4">
+          <a href="#bestil" class="btn-gold">Bestil Bord Online</a>
+          <a href="#menu" class="btn-outline-gold">Se Menukort</a>
+        </div>
+
+        <!-- Quick info chips -->
+        <div class="flex flex-wrap gap-3 mt-10 animate-fade-up animate-delay-4">
+          <span class="facility-chip">
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg>
+            Sct. Jørgens Park 68
+          </span>
+          <span class="facility-chip">
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.64A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
+            55 73 41 92
+          </span>
+          <span class="facility-chip">
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            Tirs–Fre 11:00–21:30
+          </span>
+        </div>
+      </div>
+
+      <!-- Right: Food visual panel -->
+      <div class="hidden lg:grid grid-cols-2 gap-4 h-[520px]">
+        <!-- Main tall card -->
+        <div class="hero-food-panel rounded-sm row-span-2 relative" style="background: linear-gradient(145deg, #1A1208 0%, #0F0D08 100%);">
+          <div class="absolute inset-0 flex flex-col items-center justify-center gap-3 opacity-60">
+            <span style="font-size: 5rem;">🥩</span>
+            <span class="font-display text-sm tracking-widest uppercase" style="color: var(--gold); font-size: 0.65rem; letter-spacing: 0.3em;">Colorado Steak</span>
+          </div>
+          <div class="absolute bottom-0 left-0 right-0 p-5" style="background: linear-gradient(0deg, rgba(0,0,0,0.8) 0%, transparent 100%);">
+            <p class="font-display text-lg" style="color: var(--cream);">Signaturret</p>
+            <p class="text-xs" style="color: var(--gold);">Ad libitum fra 195 kr.</p>
+          </div>
+        </div>
+        <!-- Two smaller cards -->
+        <div class="hero-food-panel rounded-sm relative">
+          <div class="absolute inset-0 flex flex-col items-center justify-center opacity-60">
+            <span style="font-size: 3rem;">🥗</span>
+            <span class="font-display text-xs tracking-widest mt-2" style="color: var(--gold); letter-spacing: 0.2em;">Smørrebrød</span>
+          </div>
+        </div>
+        <div class="hero-food-panel rounded-sm relative">
+          <div class="absolute inset-0 flex flex-col items-center justify-center opacity-60">
+            <span style="font-size: 3rem;">🍮</span>
+            <span class="font-display text-xs tracking-widest mt-2" style="color: var(--gold); letter-spacing: 0.2em;">Desserter</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-50">
+    <span class="text-xs tracking-widest uppercase" style="color: var(--gold); font-size: 0.6rem; letter-spacing: 0.3em;">Scroll</span>
+    <div class="w-px h-12 relative overflow-hidden" style="background: rgba(201,168,76,0.2);">
+      <div id="scroll-line" class="absolute top-0 left-0 w-full" style="height: 40%; background: var(--gold); animation: scrollLine 1.8s infinite;"></div>
+    </div>
+  </div>
+</section>
+
+<style>
+@keyframes scrollLine {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(350%); }
+}
+</style>
+
+
+<!-- ══════════════════════════════════════
+     OM RESTAURANTEN
+══════════════════════════════════════ -->
+<section id="om" class="section-charcoal py-24">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+      <!-- Left: Large feature visual -->
+      <div class="reveal">
+        <div class="relative">
+          <!-- Main frame -->
+          <div class="relative" style="background: linear-gradient(135deg, #1A1208, #0D0D0D); aspect-ratio: 4/5; border: 1px solid rgba(201,168,76,0.12); display: flex; align-items: center; justify-content: center;">
+            <div style="text-align: center; opacity: 0.4;">
+              <div style="font-size: 6rem;">🍽️</div>
+              <p class="font-display text-sm tracking-widest mt-2" style="color: var(--gold); letter-spacing: 0.25em;">Restaurant Mona Lisa</p>
+            </div>
+            <!-- Gold corner accents -->
+            <span style="position: absolute; top: 0; left: 0; width: 40px; height: 40px; border-top: 2px solid var(--gold); border-left: 2px solid var(--gold);"></span>
+            <span style="position: absolute; bottom: 0; right: 0; width: 40px; height: 40px; border-bottom: 2px solid var(--gold); border-right: 2px solid var(--gold);"></span>
+          </div>
+          <!-- Floating badge -->
+          <div class="absolute -bottom-6 -right-6 p-5 text-center" style="background: var(--gold); min-width: 120px;">
+            <span class="font-display text-3xl font-bold" style="color: #0D0D0D; line-height: 1;">40+</span>
+            <p class="text-xs font-semibold uppercase tracking-wide mt-0.5" style="color: #0D0D0D; letter-spacing: 0.1em;">Års erfaring</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Text -->
+      <div class="reveal lg:pl-8">
+        <p class="section-eyebrow mb-3">Om Restaurant Mona Lisa</p>
+        <div class="gold-divider mb-6"></div>
+        <h2 class="section-title text-4xl md:text-5xl mb-6" style="color: var(--cream);">
+          Smag, tradition<br />
+          <em style="color: var(--gold);">og gæstfrihed</em>
+        </h2>
+        <p class="mb-5 leading-relaxed" style="color: #999; font-family: 'Cormorant Garamond', serif; font-size: 1.1rem;">
+          Restaurant Mona Lisa er en af Næstveds hyggeligste familierestauranter. Hos os kombinerer vi det klassiske danske køkken med moderne tilberedning og en varm, indbydende atmosfære, der gør os til det perfekte sted for alle lejligheder.
+        </p>
+        <p class="mb-8 leading-relaxed" style="color: #888; font-family: 'Cormorant Garamond', serif; font-size: 1.1rem;">
+          Fra vores populære smørrebrød og stjerneskud til den berømte Colorado Steak ad libitum — vi sørger for, at alle gæster forlader mætte og glade. Vi byder på børnevenlige faciliteter, en dejlig terrasse og selskabslokaler til ethvert arrangement.
+        </p>
+
+        <!-- Facility chips grid -->
+        <div class="flex flex-wrap gap-2 mb-8">
+          <span class="facility-chip">🧒 Børnelegerum</span>
+          <span class="facility-chip">🌿 Terrasse</span>
+          <span class="facility-chip">🎉 Selskabslokaler</span>
+          <span class="facility-chip">🥡 Takeaway</span>
+          <span class="facility-chip">🚚 Mad ud af huset</span>
+          <span class="facility-chip">🍱 Catering</span>
+        </div>
+
+        <a href="#bestil" class="btn-gold">Bestil bord nu</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════
+     POPULÆRE RETTER
+══════════════════════════════════════ -->
+<section class="section-dark py-24">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <div class="text-center reveal mb-14">
+      <p class="section-eyebrow mb-3">Favoritterne</p>
+      <div class="gold-divider mx-auto mb-5"></div>
+      <h2 class="section-title text-4xl md:text-5xl" style="color: var(--cream);">
+        Populære <em style="color: var(--gold);">retter</em>
+      </h2>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+      <div class="dish-card reveal">
+        <div class="dish-img" style="height: 180px;">🥩</div>
+        <div class="p-5">
+          <p class="section-eyebrow mb-1">Signaturret</p>
+          <h3 class="font-display text-lg mb-2" style="color: var(--cream);">Colorado Steak</h3>
+          <p class="text-sm mb-4 leading-relaxed" style="color: #777;">Ad libitum med culottesteg, barbecue ribs, bagt kartoffel og salatbar.</p>
+          <div class="flex items-center justify-between">
+            <span class="menu-price">195 kr.</span>
+            <a href="#colorado" class="text-xs" style="color: var(--gold); letter-spacing: 0.1em; text-transform: uppercase;">Se mere →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="dish-card reveal" style="animation-delay: 0.1s;">
+        <div class="dish-img" style="height: 180px;">🐟</div>
+        <div class="p-5">
+          <p class="section-eyebrow mb-1">Klassiker</p>
+          <h3 class="font-display text-lg mb-2" style="color: var(--cream);">Stjerneskud</h3>
+          <p class="text-sm mb-4 leading-relaxed" style="color: #777;">Sprød rødspætte, rejer, kaviar og hjemmelavet remoulade på ristet rugbrød.</p>
+          <span class="menu-price">Se menukort</span>
+        </div>
+      </div>
+
+      <div class="dish-card reveal" style="animation-delay: 0.2s;">
+        <div class="dish-img" style="height: 180px;">🥩</div>
+        <div class="p-5">
+          <p class="section-eyebrow mb-1">Eftermiddagsfavorit</p>
+          <h3 class="font-display text-lg mb-2" style="color: var(--cream);">Pariserbøf</h3>
+          <p class="text-sm mb-4 leading-relaxed" style="color: #777;">Klassisk dansk pariserbøf med alle tilbehørene – et stykke dansk madskat.</p>
+          <span class="menu-price">Se menukort</span>
+        </div>
+      </div>
+
+      <div class="dish-card reveal" style="animation-delay: 0.3s;">
+        <div class="dish-img" style="height: 180px;">🍮</div>
+        <div class="p-5">
+          <p class="section-eyebrow mb-1">Søde sager</p>
+          <h3 class="font-display text-lg mb-2" style="color: var(--cream);">Dagens Dessert</h3>
+          <p class="text-sm mb-4 leading-relaxed" style="color: #777;">Sæsonens bedste råvarer fortolket som den perfekte afslutning på måltidet.</p>
+          <span class="menu-price">Se menukort</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════
+     COLORADO STEAK
+══════════════════════════════════════ -->
+<section id="colorado" class="colorado-bg py-24">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+      <!-- Left: Info -->
+      <div class="reveal">
+        <p class="section-eyebrow mb-3">Signaturrettten</p>
+        <div class="gold-divider mb-6"></div>
+        <h2 class="section-title text-4xl md:text-5xl mb-2" style="color: var(--cream);">Colorado Steak</h2>
+        <p class="font-elegant text-xl mb-8 italic" style="color: var(--gold);">Ad libitum — spis så meget du vil</p>
+
+        <p class="mb-8 leading-relaxed" style="color: #999; font-family: 'Cormorant Garamond', serif; font-size: 1.1rem;">
+          Vores Colorado Steak er Mona Lisas mest elskede tradition. For en fast pris kan du spise så meget du vil af vores udvalg — perfekt for den sultne familie eller selskabet der vil nyde en uforglemmelig aften.
+        </p>
+
+        <!-- What's included -->
+        <div class="mb-8">
+          <p class="text-xs tracking-widest uppercase mb-4" style="color: var(--gold); letter-spacing: 0.2em;">Inkluderet i Colorado Steak</p>
+          <div class="grid grid-cols-2 gap-2">
+            <div class="flex items-center gap-2 text-sm" style="color: #bbb;">
+              <span style="color: var(--gold);">✦</span> Culottesteg
+            </div>
+            <div class="flex items-center gap-2 text-sm" style="color: #bbb;">
+              <span style="color: var(--gold);">✦</span> Barbecue Ribs
+            </div>
+            <div class="flex items-center gap-2 text-sm" style="color: #bbb;">
+              <span style="color: var(--gold);">✦</span> Bagt Kartoffel
+            </div>
+            <div class="flex items-center gap-2 text-sm" style="color: #bbb;">
+              <span style="color: var(--gold);">✦</span> Pommes Frites
+            </div>
+            <div class="flex items-center gap-2 text-sm" style="color: #bbb;">
+              <span style="color: var(--gold);">✦</span> Bearnaise Sauce
+            </div>
+            <div class="flex items-center gap-2 text-sm" style="color: #bbb;">
+              <span style="color: var(--gold);">✦</span> Bordelaise Sauce
+            </div>
+            <div class="flex items-center gap-2 text-sm col-span-2" style="color: #bbb;">
+              <span style="color: var(--gold);">✦</span> Frisk Salatbar
+            </div>
+          </div>
+        </div>
+
+        <a href="#bestil" class="btn-gold">Bestil bord til Colorado Steak</a>
+      </div>
+
+      <!-- Right: Price cards -->
+      <div class="reveal">
+        <div class="grid gap-5">
+
+          <!-- Adults -->
+          <div class="p-8 relative overflow-hidden" style="background: #0D0D0D; border: 1px solid rgba(201,168,76,0.3);">
+            <div class="absolute top-0 right-0 w-24 h-24 opacity-5">
+              <span style="font-size: 6rem; position: absolute; top: -1rem; right: -1rem;">🥩</span>
+            </div>
+            <p class="section-eyebrow mb-2">Voksne</p>
+            <div class="flex items-baseline gap-3">
+              <span class="font-display font-bold" style="font-size: 3.5rem; color: var(--gold); line-height: 1;">195</span>
+              <span class="text-xl" style="color: #777;">kr.</span>
+            </div>
+            <p class="text-sm mt-2" style="color: #777;">Ad libitum — ubegrænset mængde</p>
+          </div>
+
+          <!-- Children 8-12 -->
+          <div class="p-8 relative overflow-hidden" style="background: #141414; border: 1px solid rgba(201,168,76,0.12);">
+            <p class="section-eyebrow mb-2">Børn 8–12 år</p>
+            <div class="flex items-baseline gap-3">
+              <span class="font-display font-bold" style="font-size: 3.5rem; color: var(--gold-light); line-height: 1;">99</span>
+              <span class="text-xl" style="color: #777;">kr.</span>
+            </div>
+            <p class="text-sm mt-2" style="color: #777;">Ad libitum for de yngste</p>
+          </div>
+
+          <!-- Free children -->
+          <div class="p-6" style="background: rgba(201,168,76,0.06); border: 1px solid rgba(201,168,76,0.2); display: flex; align-items: center; gap-4;">
+            <span style="font-size: 2.5rem; opacity: 0.8;">🎉</span>
+            <div>
+              <p class="font-display text-lg" style="color: var(--cream);">Børn under 8 år spiser gratis</p>
+              <p class="text-sm" style="color: #888;">Maks. ét barn pr. betalende voksen</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════
+     FULDT MENUKORT
+══════════════════════════════════════ -->
+<section id="menu" class="section-charcoal py-24">
+  <div class="max-w-4xl mx-auto px-6">
+
+    <div class="text-center reveal mb-12">
+      <p class="section-eyebrow mb-3">Hvad vi tilbyder</p>
+      <div class="gold-divider mx-auto mb-5"></div>
+      <h2 class="section-title text-4xl md:text-5xl" style="color: var(--cream);">
+        Vores <em style="color: var(--gold);">Menukort</em>
+      </h2>
+      <p class="mt-4 text-base" style="color: #777; font-family: 'Cormorant Garamond', serif; font-size: 1.1rem;">
+        Kontakt os for aktuelle priser og sæsonens specialiteter
+      </p>
+    </div>
+
+    <!-- Tabs -->
+    <div class="reveal flex flex-wrap gap-2 mb-8 justify-center">
+      <button class="menu-tab active" data-tab="frokost">Frokost</button>
+      <button class="menu-tab" data-tab="forretter">Forretter</button>
+      <button class="menu-tab" data-tab="hoved">Hovedretter</button>
+      <button class="menu-tab" data-tab="stegt">Stegt Flæsk</button>
+      <button class="menu-tab" data-tab="colorado-menu">Colorado Steak</button>
+      <button class="menu-tab" data-tab="soendag">Søndagstilbud</button>
+      <button class="menu-tab" data-tab="desserter">Desserter</button>
+      <button class="menu-tab" data-tab="kager">Kager</button>
+    </div>
+
+    <!-- Panels -->
+    <div class="reveal" style="background: #0D0D0D; border: 1px solid rgba(201,168,76,0.08); padding: 2rem 2.5rem;">
+
+      <!-- Frokost -->
+      <div id="tab-frokost" class="menu-panel active">
+        <p class="section-eyebrow mb-6">Frokostmenu – serveret 11:00–14:30</p>
+        <div class="menu-item flex items-start justify-between gap-4">
+          <div>
+            <h4 class="font-display text-base mb-0.5" style="color: var(--cream);">Stjerneskud</h4>
+            <p class="text-sm" style="color: #666;">Rødspætte, rejer, kaviar, æg og remoulade på ristet rugbrød</p>
+          </div>
+          <span class="menu-price">–</span>
+        </div>
+        <div class="menu-item flex items-start justify-between gap-4">
+          <div>
+            <h4 class="font-display text-base mb-0.5" style="color: var(--cream);">Smørrebrød (3 stk.)</h4>
+            <p class="text-sm" style="color: #666;">Chef's valg af klassiske pålæg på hjemmebagt rugbrød</p>
+          </div>
+          <span class="menu-price">–</span>
+        </div>
+        <div class="menu-item flex items-start justify-between gap-4">
+          <div>
+            <h4 class="font-display text-base mb-0.5" style="color: var(--cream);">Pariserbøf</h4>
+            <p class="text-sm" style="color: #666;">Klassisk pariserbøf med løgringe, kapers, rødbeder og sennep</p>
+          </div>
+          <span class="menu-price">–</span>
+        </div>
+        <div class="menu-item flex items-start justify-between gap-4">
+          <div>
+            <h4 class="font-display text-base mb-0.5" style="color: var(--cream);">Dagens Frokostret</h4>
+            <p class="text-sm" style="color: #666;">Spørg tjeneren om dagens udvalg</p>
+          </div>
+          <span class="menu-price">–</span>
+        </div>
+        <p class="mt-6 text-sm" style="color: #555; font-style: italic;">Ring på 55 73 41 92 for aktuelle priser</p>
+      </div>
+
+      <!-- Forretter -->
+      <div id="tab-forretter" class="menu-panel">
+        <p class="section-eyebrow mb-6">Forretter</p>
+        <div class="menu-item flex items-start justify-between gap-4">
+          <div>
+            <h4 class="font-display text-base mb-0.5" style="color: var(--cream);">Suppe af dagen</h4>
+            <p class="text-sm" style="color: #666;">Dagens hjemmelavede suppe med brød</p>
+          </div>
+          <span class="menu-price">–</span>
+        </div>
+        <div class="menu-item flex items-start justify-between gap-4">
+          <div>
+            <h4 class="font-display text-base mb-0.5" style="color: var(--cream);">Rejecocktail</h4>
+            <p class="text-sm" style="color: #666;">Friske rejer med cocktailsauce, citron og salat</p>
+          </div>
+          <span class="menu-price">–</span>
+        </div>
+        <div class="menu-item flex items-start justify-between gap-4">
+          <div>
+            <h4 class="font-display text-base mb-0.5" style="color: var(--cream);">Garlic Bread</h4>
+            <p class="text-sm" style="color: #666;">Sprødt hvidløgsbrød med urter og smør</p>
+          </div>
+          <span class="menu-price">–</span>
+        </div>
+        <p class="mt-6 text-sm" style="color: #555; font-style: italic;">Ring på 55 73 41 92 for aktuelle priser</p>
+      </div>
+
+      <!-- Hovedretter -->
+      <div id="tab-hoved" class="menu-panel">
+        <p class="section-eyebrow mb-6">Hovedretter</p>
+        <div class="menu-item flex items-start justify-between gap-4">
+          <div>
+            <h4 class="font-display text-base mb-0.5" style="color: var(--cream);">Bøf med løg</h4>
+            <p class="text-sm" style="color: #666;">Klassisk oksebøf med karamelliserede løg, brun sauce og kartofler</p>
+          </div>
+          <span class="menu-price">–</span>
+        </div>
+        <div class="menu-item flex items-start justify-between gap-4">
+          <div>
+            <h4 class="font-display text-base mb-0.5" style="color: var(--cream);">Mørbrad i flødesauce</h4>
+            <p class="text-sm" style="color: #666;">Svinemørbrad, svampe, asparges og flødekartofler</p>
+          </div>
+          <span class="menu-price">–</span>
+        </div>
+        <div class="menu-item flex items-start justify-between gap-4">
+          <div>
+            <h4 class="font-display text-base mb-0.5" style="color: var(--cream);">Fiskefad</h4>
+            <p class="text-sm" style="color: #666;">Dagens fisk med tilbehør og hjemmelavet sauce</p>
+          </div>
+          <span class="menu-price">–</span>
+        </div>
+        <div class="menu-item flex items-start justify-between gap-4">
+          <div>
+            <h4 class="font-display text-base mb-0.5" style="color: var(--cream);">Børnemenu</h4>
+            <p class="text-sm" style="color: #666;">Nuggets eller bøf med pommes frites og ketchup</p>
+          </div>
+          <span class="menu-price">–</span>
+        </div>
+        <p class="mt-6 text-sm" style="color: #555; font-style: italic;">Ring på 55 73 41 92 for aktuelle priser</p>
+      </div>
+
+      <!-- Stegt Flæsk -->
+      <div id="tab-stegt" class="menu-panel">
+        <p class="section-eyebrow mb-6">Stegt Flæsk – Danmarks nationalret</p>
+        <div class="menu-item flex items-start justify-between gap-4">
+          <div>
+            <h4 class="font-display text-base mb-0.5" style="color: var(--cream);">Stegt Flæsk med persillesovs</h4>
+            <p class="text-sm" style="color: #666;">Sprødt stegt flæsk, hjemmelavet persillesovs og kogte kartofler</p>
+          </div>
+          <span class="menu-price">–</span>
+        </div>
+        <div class="menu-item flex items-start justify-between gap-4">
+          <div>
+            <h4 class="font-display text-base mb-0.5" style="color: var(--cream);">Stegt Flæsk med grøntsager</h4>
+            <p class="text-sm" style="color: #666;">Sprødt flæsk med sæsonens grøntsager og hvid sauce</p>
+          </div>
+          <span class="menu-price">–</span>
+        </div>
+        <p class="mt-6 text-sm" style="color: #555; font-style: italic;">Ring på 55 73 41 92 for aktuelle priser</p>
+      </div>
+
+      <!-- Colorado Steak menu tab -->
+      <div id="tab-colorado-menu" class="menu-panel">
+        <p class="section-eyebrow mb-6">Colorado Steak – Ad libitum</p>
+        <div class="menu-item flex items-start justify-between gap-4">
+          <div>
+            <h4 class="font-display text-base mb-0.5" style="color: var(--cream);">Colorado Steak – Voksen</h4>
+            <p class="text-sm" style="color: #666;">Culottesteg, ribs, bagt kartoffel, pommes frites, saucer og salatbar</p>
+          </div>
+          <span class="menu-price">195 kr.</span>
+        </div>
+        <div class="menu-item flex items-start justify-between gap-4">
+          <div>
+            <h4 class="font-display text-base mb-0.5" style="color: var(--cream);">Colorado Steak – Børn 8–12 år</h4>
+            <p class="text-sm" style="color: #666;">Samme indhold som voksne – perfekt til de sultne små</p>
+          </div>
+          <span class="menu-price">99 kr.</span>
+        </div>
+        <div class="menu-item flex items-start justify-between gap-4">
+          <div>
+            <h4 class="font-display text-base mb-0.5" style="color: var(--cream);">Colorado Steak – Børn under 8 år</h4>
+            <p class="text-sm" style="color: #666;">Spiser gratis med én betalende voksen (maks. ét barn pr. voksen)</p>
+          </div>
+          <span class="menu-price" style="color: #5a9;">Gratis</span>
+        </div>
+      </div>
+
+      <!-- Søndag -->
+      <div id="tab-soendag" class="menu-panel">
+        <p class="section-eyebrow mb-6">Søndagstilbud – 17:00–21:00</p>
+        <div class="menu-item flex items-start justify-between gap-4">
+          <div>
+            <h4 class="font-display text-base mb-0.5" style="color: var(--cream);">Søndagssteg</h4>
+            <p class="text-sm" style="color: #666;">Klassisk søndagssteg med brun sauce, rødkål og flødekartofler</p>
+          </div>
+          <span class="menu-price">–</span>
+        </div>
+        <div class="menu-item flex items-start justify-between gap-4">
+          <div>
+            <h4 class="font-display text-base mb-0.5" style="color: var(--cream);">Familietilbud Søndag</h4>
+            <p class="text-sm" style="color: #666;">Specielle søndagspriser for familier – spørg om det aktuelle tilbud</p>
+          </div>
+          <span class="menu-price">–</span>
+        </div>
+        <p class="mt-6 text-sm" style="color: #555; font-style: italic;">Ring på 55 73 41 92 for aktuelle tilbud</p>
+      </div>
+
+      <!-- Desserter -->
+      <div id="tab-desserter" class="menu-panel">
+        <p class="section-eyebrow mb-6">Desserter</p>
+        <div class="menu-item flex items-start justify-between gap-4">
+          <div>
+            <h4 class="font-display text-base mb-0.5" style="color: var(--cream);">Is med tilbehør</h4>
+            <p class="text-sm" style="color: #666;">Vanilleis med sæsonens frugt og flødeskum</p>
+          </div>
+          <span class="menu-price">–</span>
+        </div>
+        <div class="menu-item flex items-start justify-between gap-4">
+          <div>
+            <h4 class="font-display text-base mb-0.5" style="color: var(--cream);">Chokoladefondant</h4>
+            <p class="text-sm" style="color: #666;">Varm chokoladekage med flydende midte og vanilleis</p>
+          </div>
+          <span class="menu-price">–</span>
+        </div>
+        <div class="menu-item flex items-start justify-between gap-4">
+          <div>
+            <h4 class="font-display text-base mb-0.5" style="color: var(--cream);">Tiramisu</h4>
+            <p class="text-sm" style="color: #666;">Klassisk italiensk tiramisu med espresso og mascarpone</p>
+          </div>
+          <span class="menu-price">–</span>
+        </div>
+        <p class="mt-6 text-sm" style="color: #555; font-style: italic;">Ring på 55 73 41 92 for aktuelle priser</p>
+      </div>
+
+      <!-- Kager -->
+      <div id="tab-kager" class="menu-panel">
+        <p class="section-eyebrow mb-6">Kager & Kaffe</p>
+        <div class="menu-item flex items-start justify-between gap-4">
+          <div>
+            <h4 class="font-display text-base mb-0.5" style="color: var(--cream);">Lagkage</h4>
+            <p class="text-sm" style="color: #666;">Hjemmelavet lagkage – kan også bestilles til selskaber</p>
+          </div>
+          <span class="menu-price">–</span>
+        </div>
+        <div class="menu-item flex items-start justify-between gap-4">
+          <div>
+            <h4 class="font-display text-base mb-0.5" style="color: var(--cream);">Kaffe og kage</h4>
+            <p class="text-sm" style="color: #666;">Friskbrygget kaffe med dagens kage</p>
+          </div>
+          <span class="menu-price">–</span>
+        </div>
+        <div class="menu-item flex items-start justify-between gap-4">
+          <div>
+            <h4 class="font-display text-base mb-0.5" style="color: var(--cream);">Selskabskager</h4>
+            <p class="text-sm" style="color: #666;">Bestil en special kage til dit selskab – ring for priser</p>
+          </div>
+          <span class="menu-price">–</span>
+        </div>
+        <p class="mt-6 text-sm" style="color: #555; font-style: italic;">Ring på 55 73 41 92 for aktuelle priser</p>
+      </div>
+
+    </div>
+
+    <!-- CTA -->
+    <div class="reveal text-center mt-8">
+      <p class="text-sm mb-4" style="color: #666;">Har du spørgsmål til menuen?</p>
+      <a href="tel:55734192" class="btn-outline-gold">Ring til os: 55 73 41 92</a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════
+     SELSKABER
+══════════════════════════════════════ -->
+<section id="selskaber" class="section-dark py-24">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <div class="grid lg:grid-cols-2 gap-16 items-start">
+
+      <div class="reveal">
+        <p class="section-eyebrow mb-3">Arrangementer</p>
+        <div class="gold-divider mb-6"></div>
+        <h2 class="section-title text-4xl md:text-5xl mb-6" style="color: var(--cream);">
+          Selskaber &<br />
+          <em style="color: var(--gold);">arrangementer</em>
+        </h2>
+        <p class="mb-6 leading-relaxed" style="color: #999; font-family: 'Cormorant Garamond', serif; font-size: 1.1rem;">
+          Restaurant Mona Lisa er det oplagte valg til alle typer selskaber. Fra den intime familiefest til det store firmaarrangement — vi har plads, erfaringen og maden til at gøre din begivenhed uforglemmelig.
+        </p>
+        <p class="mb-8 leading-relaxed" style="color: #888; font-family: 'Cormorant Garamond', serif; font-size: 1.1rem;">
+          Vi tilbyder skræddersyede selskabsmenuer, buffeter og mad ud af huset — alt tilpasset dine ønsker og budget. Kontakt os for et uforpligtende tilbud.
+        </p>
+        <a href="mailto:mona@restaurant-monalisa.dk" class="btn-gold">Forespørg om selskab</a>
+      </div>
+
+      <div class="reveal grid grid-cols-2 gap-4">
+
+        <div class="p-6" style="background: #111; border: 1px solid rgba(201,168,76,0.1);">
+          <div style="font-size: 2.5rem; margin-bottom: 1rem;">🎂</div>
+          <h3 class="font-display text-lg mb-2" style="color: var(--cream);">Fødselsdage</h3>
+          <p class="text-sm leading-relaxed" style="color: #666;">Fejr den store dag med familie og venner i hyggelige omgivelser</p>
+        </div>
+
+        <div class="p-6" style="background: #111; border: 1px solid rgba(201,168,76,0.1);">
+          <div style="font-size: 2.5rem; margin-bottom: 1rem;">💍</div>
+          <h3 class="font-display text-lg mb-2" style="color: var(--cream);">Bryllupper</h3>
+          <p class="text-sm leading-relaxed" style="color: #666;">En romantisk og mindeværdig ramme for jeres store dag</p>
+        </div>
+
+        <div class="p-6" style="background: #111; border: 1px solid rgba(201,168,76,0.1);">
+          <div style="font-size: 2.5rem; margin-bottom: 1rem;">🏢</div>
+          <h3 class="font-display text-lg mb-2" style="color: var(--cream);">Firmafester</h3>
+          <p class="text-sm leading-relaxed" style="color: #666;">Professionalisme og god mad til jeres næste firmabegivenhed</p>
+        </div>
+
+        <div class="p-6" style="background: #111; border: 1px solid rgba(201,168,76,0.1);">
+          <div style="font-size: 2.5rem; margin-bottom: 1rem;">🍱</div>
+          <h3 class="font-display text-lg mb-2" style="color: var(--cream);">Catering</h3>
+          <p class="text-sm leading-relaxed" style="color: #666;">Vi bringer maden direkte til dit event — uanset størrelse</p>
+        </div>
+
+        <!-- Buffet feature -->
+        <div class="col-span-2 p-6 flex items-center gap-5" style="background: rgba(201,168,76,0.06); border: 1px solid rgba(201,168,76,0.2);">
+          <span style="font-size: 3rem;">🍽️</span>
+          <div>
+            <h3 class="font-display text-xl mb-1" style="color: var(--cream);">Selskabsbuffeter</h3>
+            <p class="text-sm" style="color: #888;">Skræddersyede buffeter til enhver lejlighed. Vi sammensætter menuen efter dine ønsker og antal gæster.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════
+     GALLERI
+══════════════════════════════════════ -->
+<section id="galleri" class="section-charcoal py-24">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <div class="text-center reveal mb-12">
+      <p class="section-eyebrow mb-3">Stemning & Mad</p>
+      <div class="gold-divider mx-auto mb-5"></div>
+      <h2 class="section-title text-4xl md:text-5xl" style="color: var(--cream);">
+        Fra vores <em style="color: var(--gold);">køkken</em>
+      </h2>
+    </div>
+
+    <div class="reveal grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+      <div class="gallery-item" style="background: linear-gradient(135deg, #1A1208, #0D0D0D);">
+        <span style="font-size: 3.5rem; opacity: 0.6;">🥩</span>
+        <div class="gallery-overlay"></div>
+      </div>
+      <div class="gallery-item lg:col-span-2" style="background: linear-gradient(135deg, #0F1208, #0D0D0D);">
+        <span style="font-size: 4.5rem; opacity: 0.6;">🍽️</span>
+        <div class="gallery-overlay"></div>
+      </div>
+      <div class="gallery-item" style="background: linear-gradient(135deg, #130D08, #0D0D0D);">
+        <span style="font-size: 3.5rem; opacity: 0.6;">🥗</span>
+        <div class="gallery-overlay"></div>
+      </div>
+      <div class="gallery-item" style="background: linear-gradient(135deg, #120810, #0D0D0D);">
+        <span style="font-size: 3.5rem; opacity: 0.6;">🍮</span>
+        <div class="gallery-overlay"></div>
+      </div>
+      <div class="gallery-item" style="background: linear-gradient(135deg, #081212, #0D0D0D);">
+        <span style="font-size: 3.5rem; opacity: 0.6;">🐟</span>
+        <div class="gallery-overlay"></div>
+      </div>
+      <div class="gallery-item" style="background: linear-gradient(135deg, #120D08, #0D0D0D);">
+        <span style="font-size: 3.5rem; opacity: 0.6;">🥂</span>
+        <div class="gallery-overlay"></div>
+      </div>
+      <div class="gallery-item" style="background: linear-gradient(135deg, #1A1208, #0D0D0D);">
+        <span style="font-size: 3.5rem; opacity: 0.6;">🎂</span>
+        <div class="gallery-overlay"></div>
+      </div>
+    </div>
+
+    <div class="reveal text-center mt-8">
+      <p class="text-sm" style="color: #555;">Følg os på sociale medier for mere inspiration</p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════
+     ANMELDELSER
+══════════════════════════════════════ -->
+<section class="section-dark py-24">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <div class="text-center reveal mb-12">
+      <p class="section-eyebrow mb-3">Hvad gæsterne siger</p>
+      <div class="gold-divider mx-auto mb-5"></div>
+      <h2 class="section-title text-4xl md:text-5xl" style="color: var(--cream);">
+        Vores <em style="color: var(--gold);">gæster</em> fortæller
+      </h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6">
+
+      <div class="review-card p-7 reveal">
+        <div class="flex gap-0.5 mb-4">
+          <span style="color: var(--gold);">★★★★★</span>
+        </div>
+        <p class="mb-5 leading-relaxed italic" style="color: #aaa; font-family: 'Cormorant Garamond', serif; font-size: 1.05rem;">
+          "Colorado Steaken er simpelthen fantastisk! Vi kommer her hvert år på vores bryllupsdag — personalet er altid utroligt venligt og maden er altid i top."
+        </p>
+        <div class="flex items-center gap-3">
+          <div style="width: 40px; height: 40px; background: var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; color: #0D0D0D; font-size: 0.9rem;">MH</div>
+          <div>
+            <p class="font-semibold text-sm" style="color: var(--cream);">Maria H.</p>
+            <p class="text-xs" style="color: #555;">Næstved</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card p-7 reveal" style="animation-delay: 0.1s;">
+        <div class="flex gap-0.5 mb-4">
+          <span style="color: var(--gold);">★★★★★</span>
+        </div>
+        <p class="mb-5 leading-relaxed italic" style="color: #aaa; font-family: 'Cormorant Garamond', serif; font-size: 1.05rem;">
+          "Vi holdt vores datter's fødselsdagsfest her og det var perfekt. Stedet er børnevenligt, maden er lækker og prisen er rigtig god. Varmt anbefalet!"
+        </p>
+        <div class="flex items-center gap-3">
+          <div style="width: 40px; height: 40px; background: var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; color: #0D0D0D; font-size: 0.9rem;">TK</div>
+          <div>
+            <p class="font-semibold text-sm" style="color: var(--cream);">Thomas K.</p>
+            <p class="text-xs" style="color: #555;">Ringsted</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card p-7 reveal" style="animation-delay: 0.2s;">
+        <div class="flex gap-0.5 mb-4">
+          <span style="color: var(--gold);">★★★★☆</span>
+        </div>
+        <p class="mb-5 leading-relaxed italic" style="color: #aaa; font-family: 'Cormorant Garamond', serif; font-size: 1.05rem;">
+          "Fremragende smørrebrød og en hyggelig frokost. Godt gammeldags dansk køkken uden de store dikkedarer. Stjerneskuddet var en absolut fornøjelse!"
+        </p>
+        <div class="flex items-center gap-3">
+          <div style="width: 40px; height: 40px; background: var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; color: #0D0D0D; font-size: 0.9rem;">AJ</div>
+          <div>
+            <p class="font-semibold text-sm" style="color: var(--cream);">Anne J.</p>
+            <p class="text-xs" style="color: #555;">Vordingborg</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════
+     ÅBNINGSTIDER + KONTAKT
+══════════════════════════════════════ -->
+<section id="kontakt" class="section-charcoal py-24">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <div class="grid lg:grid-cols-3 gap-10">
+
+      <!-- Hours -->
+      <div class="reveal">
+        <p class="section-eyebrow mb-3">Hvornår vi er åbne</p>
+        <div class="gold-divider mb-6"></div>
+        <h2 class="section-title text-3xl mb-8" style="color: var(--cream);">Åbningstider</h2>
+
+        <div id="hours-list">
+          <div class="hours-row" data-day="1"><span class="hours-day" style="color: #888;">Mandag</span><span class="hours-time" style="color: #555;">Lukket</span></div>
+          <div class="hours-row" data-day="2"><span class="hours-day" style="color: var(--cream);">Tirsdag</span><span class="hours-time" style="color: #aaa;">11:00 – 21:00</span></div>
+          <div class="hours-row" data-day="3"><span class="hours-day" style="color: var(--cream);">Onsdag</span><span class="hours-time" style="color: #aaa;">11:00 – 21:00</span></div>
+          <div class="hours-row" data-day="4"><span class="hours-day" style="color: var(--cream);">Torsdag</span><span class="hours-time" style="color: #aaa;">11:00 – 21:00</span></div>
+          <div class="hours-row" data-day="5"><span class="hours-day" style="color: var(--cream);">Fredag</span><span class="hours-time" style="color: #aaa;">11:00 – 21:30</span></div>
+          <div class="hours-row" data-day="6"><span class="hours-day" style="color: var(--cream);">Lørdag</span><span class="hours-time" style="color: #aaa;">11:00 – 21:30</span></div>
+          <div class="hours-row" data-day="0"><span class="hours-day" style="color: var(--cream);">Søndag</span><span class="hours-time" style="color: #aaa;">17:00 – 21:00</span></div>
+        </div>
+
+        <!-- Open now indicator -->
+        <div id="open-indicator" class="mt-6 p-3 text-sm" style="border: 1px solid rgba(201,168,76,0.2);">
+          <span id="open-status" style="color: var(--gold);">Kontrollerer...</span>
+        </div>
+      </div>
+
+      <!-- Contact info -->
+      <div class="reveal">
+        <p class="section-eyebrow mb-3">Find os</p>
+        <div class="gold-divider mb-6"></div>
+        <h2 class="section-title text-3xl mb-8" style="color: var(--cream);">Kontakt</h2>
+
+        <div class="space-y-5">
+          <div>
+            <p class="text-xs tracking-widest uppercase mb-1" style="color: var(--gold); letter-spacing: 0.2em;">Adresse</p>
+            <p style="color: #ccc;">Sct. Jørgens Park 68</p>
+            <p style="color: #ccc;">4700 Næstved, Danmark</p>
+          </div>
+          <div>
+            <p class="text-xs tracking-widest uppercase mb-1" style="color: var(--gold); letter-spacing: 0.2em;">Telefon</p>
+            <a href="tel:55734192" class="text-lg" style="color: var(--cream);">55 73 41 92</a>
+          </div>
+          <div>
+            <p class="text-xs tracking-widest uppercase mb-1" style="color: var(--gold); letter-spacing: 0.2em;">E-mail</p>
+            <a href="mailto:mona@restaurant-monalisa.dk" style="color: #aaa; word-break: break-all;">mona@restaurant-monalisa.dk</a>
+          </div>
+        </div>
+
+        <!-- Map placeholder -->
+        <div class="map-container mt-8" style="height: 200px;">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2277.2!2d11.7606!3d55.2295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sSct.%20J%C3%B8rgens%20Park%2068%2C%204700%20N%C3%A6stved!5e0!3m2!1sda!2sdk!4v1234567890"
+            width="100%" height="200" style="border:0; filter: grayscale(80%) invert(90%) contrast(80%);"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            title="Restaurant Mona Lisa kort">
+          </iframe>
+          <!-- Fallback if maps doesn't load -->
+          <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: #0F0F0F; z-index: -1;">
+            <div class="text-center">
+              <span style="font-size: 2.5rem;">📍</span>
+              <p class="text-sm mt-2" style="color: #555;">Sct. Jørgens Park 68, Næstved</p>
+              <a href="https://maps.google.com/?q=Sct.+Jørgens+Park+68,+4700+Næstved" target="_blank" rel="noopener" class="text-xs mt-2 block" style="color: var(--gold);">Åbn i Google Maps →</a>
+            </div>
+          </div>
+        </div>
+
+        <a href="https://maps.google.com/?q=Sct.+J%C3%B8rgens+Park+68,+4700+N%C3%A6stved" target="_blank" rel="noopener" class="btn-outline-gold mt-4 text-center block" style="font-size: 0.72rem;">
+          Vis rute i Google Maps
+        </a>
+      </div>
+
+      <!-- Contact form -->
+      <div class="reveal">
+        <p class="section-eyebrow mb-3">Skriv til os</p>
+        <div class="gold-divider mb-6"></div>
+        <h2 class="section-title text-3xl mb-8" style="color: var(--cream);">Send besked</h2>
+
+        <form id="contact-form" class="space-y-4" onsubmit="handleContactForm(event)">
+          <div>
+            <label class="block text-xs tracking-widest uppercase mb-2" style="color: var(--gold); letter-spacing: 0.15em;">Navn</label>
+            <input type="text" class="form-field" placeholder="Dit fulde navn" required />
+          </div>
+          <div>
+            <label class="block text-xs tracking-widest uppercase mb-2" style="color: var(--gold); letter-spacing: 0.15em;">E-mail</label>
+            <input type="email" class="form-field" placeholder="din@email.dk" required />
+          </div>
+          <div>
+            <label class="block text-xs tracking-widest uppercase mb-2" style="color: var(--gold); letter-spacing: 0.15em;">Emne</label>
+            <select class="form-field">
+              <option value="">Vælg emne</option>
+              <option value="reservation">Bordreservation</option>
+              <option value="selskab">Selskabsforespørgsel</option>
+              <option value="catering">Catering</option>
+              <option value="andet">Andet</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs tracking-widest uppercase mb-2" style="color: var(--gold); letter-spacing: 0.15em;">Besked</label>
+            <textarea class="form-field" rows="4" placeholder="Din besked til os..."></textarea>
+          </div>
+          <button type="submit" class="btn-gold w-full">Send Besked</button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════
+     BORDBESTILLING
+══════════════════════════════════════ -->
+<section id="bestil" class="section-dark py-24">
+  <div class="max-w-3xl mx-auto px-6">
+
+    <div class="text-center reveal mb-12">
+      <p class="section-eyebrow mb-3">Reserver dit bord</p>
+      <div class="gold-divider mx-auto mb-5"></div>
+      <h2 class="section-title text-4xl md:text-5xl" style="color: var(--cream);">
+        Bestil <em style="color: var(--gold);">bord online</em>
+      </h2>
+      <p class="mt-4 text-sm" style="color: #666;">Eller ring direkte på <a href="tel:55734192" style="color: var(--gold);">55 73 41 92</a></p>
+    </div>
+
+    <div class="reveal p-8 md:p-10" style="background: #111; border: 1px solid rgba(201,168,76,0.15);">
+      <form id="booking-form" onsubmit="handleBookingForm(event)" class="space-y-5">
+
+        <div class="grid sm:grid-cols-2 gap-5">
+          <div>
+            <label class="block text-xs tracking-widest uppercase mb-2" style="color: var(--gold); letter-spacing: 0.15em;">Navn *</label>
+            <input type="text" id="b-name" class="form-field" placeholder="Dit fulde navn" required />
+          </div>
+          <div>
+            <label class="block text-xs tracking-widest uppercase mb-2" style="color: var(--gold); letter-spacing: 0.15em;">Telefon *</label>
+            <input type="tel" id="b-phone" class="form-field" placeholder="Telefonnummer" required />
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs tracking-widest uppercase mb-2" style="color: var(--gold); letter-spacing: 0.15em;">E-mail *</label>
+          <input type="email" id="b-email" class="form-field" placeholder="din@email.dk" required />
+        </div>
+
+        <div class="grid sm:grid-cols-2 gap-5">
+          <div>
+            <label class="block text-xs tracking-widest uppercase mb-2" style="color: var(--gold); letter-spacing: 0.15em;">Dato *</label>
+            <input type="date" id="b-date" class="form-field" required />
+          </div>
+          <div>
+            <label class="block text-xs tracking-widest uppercase mb-2" style="color: var(--gold); letter-spacing: 0.15em;">Tidspunkt *</label>
+            <select id="b-time" class="form-field" required>
+              <option value="">Vælg tidspunkt</option>
+              <option value="11:00">11:00</option>
+              <option value="11:30">11:30</option>
+              <option value="12:00">12:00</option>
+              <option value="12:30">12:30</option>
+              <option value="13:00">13:00</option>
+              <option value="13:30">13:30</option>
+              <option value="14:00">14:00</option>
+              <option value="17:00">17:00</option>
+              <option value="17:30">17:30</option>
+              <option value="18:00">18:00</option>
+              <option value="18:30">18:30</option>
+              <option value="19:00">19:00</option>
+              <option value="19:30">19:30</option>
+              <option value="20:00">20:00</option>
+              <option value="20:30">20:30</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="grid sm:grid-cols-2 gap-5">
+          <div>
+            <label class="block text-xs tracking-widest uppercase mb-2" style="color: var(--gold); letter-spacing: 0.15em;">Antal voksne *</label>
+            <select id="b-adults" class="form-field" required>
+              <option value="">Vælg</option>
+              <option value="1">1 voksen</option>
+              <option value="2">2 voksne</option>
+              <option value="3">3 voksne</option>
+              <option value="4">4 voksne</option>
+              <option value="5">5 voksne</option>
+              <option value="6">6 voksne</option>
+              <option value="7">7 voksne</option>
+              <option value="8">8+ voksne</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs tracking-widest uppercase mb-2" style="color: var(--gold); letter-spacing: 0.15em;">Antal børn</label>
+            <select id="b-children" class="form-field">
+              <option value="0">Ingen børn</option>
+              <option value="1">1 barn</option>
+              <option value="2">2 børn</option>
+              <option value="3">3 børn</option>
+              <option value="4">4+ børn</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs tracking-widest uppercase mb-2" style="color: var(--gold); letter-spacing: 0.15em;">Anledning</label>
+          <select id="b-occasion" class="form-field">
+            <option value="">Ingen særlig anledning</option>
+            <option value="foedselsdag">Fødselsdag</option>
+            <option value="jubilæum">Jubilæum</option>
+            <option value="bryllup">Bryllup / reception</option>
+            <option value="erhverv">Erhvervsmiddag</option>
+            <option value="colorado">Colorado Steak aften</option>
+            <option value="andet">Andet</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block text-xs tracking-widest uppercase mb-2" style="color: var(--gold); letter-spacing: 0.15em;">Særlige ønsker</label>
+          <textarea id="b-notes" class="form-field" rows="3" placeholder="Allergier, høj stol, rullestolsadgang, Colorado Steak tilbud..."></textarea>
+        </div>
+
+        <!-- Gold divider -->
+        <div class="gold-divider-full my-2"></div>
+
+        <button type="submit" class="btn-gold w-full text-center" style="padding: 1.1rem; font-size: 0.85rem; letter-spacing: 0.15em;">
+          Bekræft Bordreservation
+        </button>
+
+        <p class="text-xs text-center" style="color: #555;">
+          Vi bekræfter din reservation telefonisk inden for 24 timer. Ved spørgsmål: <a href="tel:55734192" style="color: var(--gold);">55 73 41 92</a>
+        </p>
+      </form>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════
+     FOOTER
+══════════════════════════════════════ -->
+<footer class="py-16" style="background: #050505; border-top: 1px solid rgba(201,168,76,0.1);">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <div class="grid md:grid-cols-3 gap-10 mb-12">
+
+      <!-- Brand -->
+      <div>
+        <div class="mb-5">
+          <span class="font-display font-bold text-2xl" style="color: var(--gold);">Mona Lisa</span>
+          <p class="text-xs tracking-widest uppercase" style="color: #555; letter-spacing: 0.25em; margin-top: 2px;">Restaurant · Næstved</p>
+        </div>
+        <p class="text-sm leading-relaxed" style="color: #666; font-family: 'Cormorant Garamond', serif; font-size: 1rem;">
+          Klassisk dansk køkken og familievenlig stemning siden 1985. Velkommen til bordet.
+        </p>
+      </div>
+
+      <!-- Quick links -->
+      <div>
+        <p class="text-xs tracking-widest uppercase mb-5" style="color: var(--gold); letter-spacing: 0.2em;">Navigation</p>
+        <div class="space-y-2">
+          <a href="#om" class="block text-sm" style="color: #666; transition: color 0.2s;" onmouseover="this.style.color='#C9A84C'" onmouseout="this.style.color='#666'">Om os</a>
+          <a href="#menu" class="block text-sm" style="color: #666; transition: color 0.2s;" onmouseover="this.style.color='#C9A84C'" onmouseout="this.style.color='#666'">Menukort</a>
+          <a href="#colorado" class="block text-sm" style="color: #666; transition: color 0.2s;" onmouseover="this.style.color='#C9A84C'" onmouseout="this.style.color='#666'">Colorado Steak</a>
+          <a href="#selskaber" class="block text-sm" style="color: #666; transition: color 0.2s;" onmouseover="this.style.color='#C9A84C'" onmouseout="this.style.color='#666'">Selskaber</a>
+          <a href="#bestil" class="block text-sm" style="color: #666; transition: color 0.2s;" onmouseover="this.style.color='#C9A84C'" onmouseout="this.style.color='#666'">Bestil bord</a>
+        </div>
+      </div>
+
+      <!-- Contact -->
+      <div>
+        <p class="text-xs tracking-widest uppercase mb-5" style="color: var(--gold); letter-spacing: 0.2em;">Kontakt</p>
+        <div class="space-y-3 text-sm" style="color: #666;">
+          <p>Sct. Jørgens Park 68<br />4700 Næstved</p>
+          <p><a href="tel:55734192" style="color: #888;">55 73 41 92</a></p>
+          <p><a href="mailto:mona@restaurant-monalisa.dk" style="color: #888; word-break: break-all;">mona@restaurant-monalisa.dk</a></p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="gold-divider-full mb-6"></div>
+
+    <div class="flex flex-col sm:flex-row items-center justify-between gap-3 text-xs" style="color: #444;">
+      <p>© 2026 Restaurant Mona Lisa, Næstved. Alle rettigheder forbeholdes.</p>
+      <p>CVR: kontakt restauranten</p>
+    </div>
+
+  </div>
+</footer>
+
+<!-- Toast notification -->
+<div id="toast">
+  <div class="flex items-start gap-3">
+    <span style="color: var(--gold); font-size: 1.1rem;">✓</span>
+    <p id="toast-msg">Din besked er sendt!</p>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════
+     JAVASCRIPT
+══════════════════════════════════════ -->
+<script>
+  // ── Navbar scroll ──
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 60) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  });
+
+  // ── Hamburger ──
+  document.getElementById('hamburger').addEventListener('click', () => {
+    const menu = document.getElementById('mobile-menu');
+    menu.classList.toggle('open');
+  });
+
+  // Close mobile menu on nav click
+  document.querySelectorAll('#mobile-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+      document.getElementById('mobile-menu').classList.remove('open');
+    });
+  });
+
+  // ── Smooth scroll for all anchor links ──
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        const offset = 80;
+        const top = target.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top, behavior: 'smooth' });
+      }
+    });
+  });
+
+  // ── Menu tabs ──
+  document.querySelectorAll('.menu-tab').forEach(tab => {
+    tab.addEventListener('click', function() {
+      const tabName = this.dataset.tab;
+      // Deactivate all
+      document.querySelectorAll('.menu-tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.menu-panel').forEach(p => p.classList.remove('active'));
+      // Activate selected
+      this.classList.add('active');
+      const panel = document.getElementById('tab-' + tabName);
+      if (panel) panel.classList.add('active');
+    });
+  });
+
+  // ── Scroll reveal ──
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -50px 0px' });
+
+  document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+  // ── Today's hours highlight ──
+  const today = new Date().getDay(); // 0=Sun, 1=Mon...
+  document.querySelectorAll('.hours-row').forEach(row => {
+    const day = parseInt(row.dataset.day);
+    if (day === today) {
+      row.classList.add('today');
+    }
+    if (day === 1) { // Monday
+      row.classList.add('closed');
+    }
+  });
+
+  // ── Open/closed status ──
+  function checkOpenStatus() {
+    const now = new Date();
+    const day = now.getDay();
+    const hour = now.getHours();
+    const min = now.getMinutes();
+    const time = hour * 60 + min;
+
+    const hours = {
+      0: { open: 17*60, close: 21*60 },   // Sun
+      1: null,                              // Mon – closed
+      2: { open: 11*60, close: 21*60 },   // Tue
+      3: { open: 11*60, close: 21*60 },   // Wed
+      4: { open: 11*60, close: 21*60 },   // Thu
+      5: { open: 11*60, close: 21*60+30 },// Fri
+      6: { open: 11*60, close: 21*60+30 },// Sat
+    };
+
+    const el = document.getElementById('open-status');
+    const todayHours = hours[day];
+    if (!todayHours) {
+      el.textContent = '🔴 I dag lukket (mandag)';
+      el.style.color = '#cc4444';
+    } else if (time >= todayHours.open && time < todayHours.close) {
+      const closeH = Math.floor(todayHours.close / 60);
+      const closeM = (todayHours.close % 60).toString().padStart(2,'0');
+      el.textContent = `🟢 Åben nu — lukker kl. ${closeH}:${closeM}`;
+      el.style.color = '#5aaa5a';
+    } else {
+      const openH = Math.floor(todayHours.open / 60);
+      const openM = (todayHours.open % 60).toString().padStart(2,'0');
+      el.textContent = `🔴 Lukket nu — åbner kl. ${openH}:${openM}`;
+      el.style.color = '#cc4444';
+    }
+  }
+  checkOpenStatus();
+
+  // ── Set min date for booking ──
+  const dateInput = document.getElementById('b-date');
+  if (dateInput) {
+    const tomorrow = new Date();
+    tomorrow.setDate(tomorrow.getDate() + 1);
+    dateInput.min = tomorrow.toISOString().split('T')[0];
+  }
+
+  // ── Toast notification ──
+  function showToast(msg) {
+    const toast = document.getElementById('toast');
+    document.getElementById('toast-msg').textContent = msg;
+    toast.classList.add('show');
+    setTimeout(() => toast.classList.remove('show'), 4000);
+  }
+
+  // ── Contact form ──
+  function handleContactForm(e) {
+    e.preventDefault();
+    showToast('Tak! Vi vender tilbage hurtigst muligt.');
+    e.target.reset();
+  }
+
+  // ── Booking form ──
+  function handleBookingForm(e) {
+    e.preventDefault();
+    const name = document.getElementById('b-name').value;
+    const date = document.getElementById('b-date').value;
+    const time = document.getElementById('b-time').value;
+    const adults = document.getElementById('b-adults').value;
+
+    if (!name || !date || !time || !adults) {
+      showToast('Udfyld venligst alle obligatoriske felter.');
+      return;
+    }
+
+    const d = new Date(date);
+    const dayStr = d.toLocaleDateString('da-DK', { weekday: 'long', day: 'numeric', month: 'long' });
+    showToast(`Tak, ${name}! Din reservationsforespørgsel for ${dayStr} kl. ${time} er modtaget. Vi ringer dig op inden for 24 timer.`);
+    e.target.reset();
+  }
+
+  // ── Parallax subtle effect on hero ──
+  window.addEventListener('scroll', () => {
+    const scrolled = window.scrollY;
+    const heroSlash = document.querySelector('.hero-slash');
+    if (heroSlash && scrolled < window.innerHeight) {
+      heroSlash.style.transform = `translateY(${scrolled * 0.15}px)`;
+    }
+  }, { passive: true });
+</script>
+
+</body>
+</html>
